@@ -1,0 +1,158 @@
+{
+  "stats": {
+    "years": "Years of Experience",
+    "clients": "Satisfied Clients",
+    "ports": "Ports Installed",
+    "uptime": "Guaranteed Uptime"
+  },
+  "nav": {
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "subtitle": "Technology Solutions"
+  },
+  "hero": {
+    "badge": "IT Specialists",
+    "title": "Innovation in Development and",
+    "titleHighlight": "Technology Solutions",
+    "titleEnd": "at the Forefront",
+    "subtitle": "We transform your company's digital infrastructure with robust network architecture, advanced cybersecurity, and custom software development.",
+    "cta_primary": "Request Consultation",
+    "cta_secondary": "View Services",
+    "system_status": "System Status: Optimal",
+    "cybersecurity": "Cybersecurity",
+    "encrypted": "ENCRYPTED TRAFFIC: ACTIVE"
+  },
+  "services": {
+    "badge": "Our Capabilities",
+    "title": "Comprehensive Solutions for Your Business",
+    "subtitle": "We design the digital ecosystem your business needs to scale without limits.",
+    "more": "Learn more",
+    "items": {
+      "development": {
+        "title": "Development",
+        "description": "Custom software development, progressive web apps, and scalable enterprise systems."
+      },
+      "networking": {
+        "title": "Networking",
+        "description": "Design, implementation and maintenance of LAN/WAN, Wi-Fi 6 and high-performance fiber optic networks."
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Security audits, endpoint protection, next-generation firewalls and proactive response."
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Physical and virtual servers, centralized storage solutions (SAN/NAS) with high availability."
+      },
+      "smart-buildings": {
+        "title": "Smart Buildings",
+        "description": "Automation, biometric access control, intelligent CCTV and IoT solutions for modern buildings."
+      },
+      "support": {
+        "title": "Support 24/7",
+        "description": "Specialized technical support with guaranteed response times and continuous infrastructure monitoring."
+      }
+    }
+  },
+  "clients": {
+    "title": "Our",
+    "titleHighlight": "Clients",
+    "subtitle": "Companies and institutions that trust Dajek Networks' solutions and services."
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Start Your Digital Transformation",
+    "subtitle": "Leave us your details and a specialist will contact you shortly.",
+    "name": "Full Name",
+    "namePlaceholder": "John Doe",
+    "email": "Email Address",
+    "emailPlaceholder": "john@company.com",
+    "serviceLabel": "Service of Interest",
+    "message": "Message (Optional)",
+    "messagePlaceholder": "Tell us more about your project...",
+    "submit": "Send Message",
+    "directEmail": "Or write to us directly at",
+    "services": {
+      "development": "Software Development",
+      "networking": "Networking & Infrastructure",
+      "cybersecurity": "Cybersecurity",
+      "cloud": "Cloud Computing",
+      "smart-buildings": "Smart Buildings",
+      "support": "Technical Support",
+      "consulting": "General Consulting"
+    }
+  },
+  "footer": {
+    "tagline": "We connect your vision with cutting-edge technology. We are the strategic partner driving digital transformation in LATAM.",
+    "services": "Services",
+    "company": "Company",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved.",
+    "status": "Global Status: Active",
+    "links": {
+      "networking": "Advanced Networking",
+      "cybersecurity": "Cybersecurity",
+      "infrastructure": "Cloud Infrastructure",
+      "development": "Software Development",
+      "about": "About Us",
+      "insights": "Insights",
+      "legal": "Legal"
+    }
+  },
+  "about": {
+    "badge": "About Dajek Network",
+    "title": "Driving the Digital Future",
+    "subtitle": "At Dajek Network, we merge technological innovation with strategic expertise to transform companies into industry leaders.",
+    "storyTitle": "Our Story",
+    "story1": "Founded with the vision of bridging the technology gap in Latin America, Dajek Network has grown to become a reference in integral IT solutions.",
+    "story2": "Our team is made up of certified engineers, software architects, and security consultants who share a unique passion: solving complex problems with elegant and scalable solutions.",
+    "years": "Years of Innovation",
+    "commitment": "Commitment",
+    "valuesTitle": "Our Values",
+    "valuesSubtitle": "Fundamental principles that guide every decision and project.",
+    "ctaTitle": "Join our mission",
+    "ctaSubtitle": "Looking for a technology partner who understands your vision? Let's talk.",
+    "ctaButton": "Contact Us",
+    "values": {
+      "excellence": { "title": "Excellence", "desc": "We accept nothing less than technical perfection in our deliveries." },
+      "integrity": { "title": "Integrity", "desc": "Full transparency and honesty in every interaction with our partners." },
+      "innovation": { "title": "Innovation", "desc": "We constantly seek new ways to overcome technological challenges." }
+    }
+  },
+  "serviceDetail": {
+    "back": "Back to Home",
+    "serviceBadge": "Service",
+    "description": "At Dajek Network, we understand that {{service}} is fundamental to your company's success. Our comprehensive approach combines cutting-edge technology with industry best practices to deliver exceptional results.",
+    "whyUs": "Why Choose Us?",
+    "whyUsSubtitle": "Your success is our mission. This is what sets us apart.",
+    "ctaButton": "Request Quote",
+    "bannerTitle": "Ready to take your {{service}} to the next level?",
+    "bannerSubtitle": "Contact us today for a free, no-obligation consultation.",
+    "bannerButton": "Let's Talk",
+    "features": {
+      "experience": "Proven experience in the industry.",
+      "custom": "Customized solutions for your needs.",
+      "support": "Dedicated technical support and proactive monitoring.",
+      "innovation": "Constant innovation and adoption of new technologies."
+    }
+  },
+  "methodologies": {
+    "title": "World-Class Methodologies",
+    "subtitle": "Our processes are certified and aligned with the most rigorous international standards to ensure excellence in every project.",
+    "itil": "ITIL v4 based service management",
+    "scrum": "Agile development with SCRUM and Kanban frameworks",
+    "pmi": "Project management under PMI standards"
+  },
+  "cta": {
+    "title": "Ready to modernize your IT infrastructure?",
+    "subtitle": "Schedule a free strategic consultation with our solutions architects and discover your business potential.",
+    "primary": "Get Started",
+    "secondary": "Download Portfolio"
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What our clients say",
+    "subtitle": "Our clients' trust is our greatest reward."
+  }
+}

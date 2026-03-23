@@ -1,0 +1,158 @@
+{
+  "stats": {
+    "years": "Años de Experiencia",
+    "clients": "Clientes Satisfechos",
+    "ports": "Puertos Instalados",
+    "uptime": "Uptime Garantizado"
+  },
+  "nav": {
+    "services": "Servicios",
+    "about": "Nosotros",
+    "contact": "Contactar",
+    "subtitle": "Soluciones Tecnológicas"
+  },
+  "hero": {
+    "badge": "Especialistas en IT",
+    "title": "Innovación en Desarrollo y",
+    "titleHighlight": "Soluciones Tecnológicas",
+    "titleEnd": "de Vanguardia",
+    "subtitle": "Transformamos la infraestructura digital de su empresa con arquitectura de redes robusta, ciberseguridad avanzada y desarrollo de software a medida.",
+    "cta_primary": "Solicitar Consultoría",
+    "cta_secondary": "Ver Servicios",
+    "system_status": "System Status: Optimal",
+    "cybersecurity": "Ciberseguridad",
+    "encrypted": "ENCRYPTED TRAFFIC: ACTIVE"
+  },
+  "services": {
+    "badge": "Nuestras Capacidades",
+    "title": "Soluciones Integrales para su Empresa",
+    "subtitle": "Diseñamos el ecosistema digital que su negocio necesita para escalar sin límites.",
+    "more": "Ver más",
+    "items": {
+      "development": {
+        "title": "Development",
+        "description": "Desarrollo de software a medida, aplicaciones web progresivas y sistemas empresariales escalables."
+      },
+      "networking": {
+        "title": "Networking",
+        "description": "Diseño, implementación y mantenimiento de redes LAN/WAN, Wi-Fi 6 y fibra óptica de alto rendimiento."
+      },
+      "cybersecurity": {
+        "title": "Cybersecurity",
+        "description": "Auditorías de seguridad, protección de endpoints, firewalls de nueva generación y respuesta proactiva."
+      },
+      "infrastructure": {
+        "title": "Infrastructure",
+        "description": "Servidores físicos y virtualizados, soluciones de almacenamiento centralizado (SAN/NAS) de alta disponibilidad."
+      },
+      "smart-buildings": {
+        "title": "Smart Buildings",
+        "description": "Automatización, control de acceso biométrico, CCTV inteligente y soluciones IoT para edificios modernos."
+      },
+      "support": {
+        "title": "Support 24/7",
+        "description": "Soporte técnico especializado con tiempos de respuesta garantizados y monitoreo continuo de infraestructura."
+      }
+    }
+  },
+  "clients": {
+    "title": "Nuestros",
+    "titleHighlight": "Clientes",
+    "subtitle": "Empresas e instituciones que confían en las soluciones y servicios de Dajek Networks."
+  },
+  "contact": {
+    "badge": "Contáctanos",
+    "title": "Inicia tu Transformación Digital",
+    "subtitle": "Déjanos tus datos y un especialista se pondrá en contacto contigo brevemente.",
+    "name": "Nombre Completo",
+    "namePlaceholder": "Juan Pérez",
+    "email": "Correo Electrónico",
+    "emailPlaceholder": "juan@empresa.com",
+    "serviceLabel": "Servicio de Interés",
+    "message": "Mensaje (Opcional)",
+    "messagePlaceholder": "Cuéntanos más sobre tu proyecto...",
+    "submit": "Enviar Mensaje",
+    "directEmail": "O escríbenos directamente a",
+    "services": {
+      "development": "Desarrollo de Software",
+      "networking": "Networking & Infraestructura",
+      "cybersecurity": "Ciberseguridad",
+      "cloud": "Cloud Computing",
+      "smart-buildings": "Edificios Inteligentes",
+      "support": "Soporte Técnico",
+      "consulting": "Consultoría General"
+    }
+  },
+  "footer": {
+    "tagline": "Conectamos su visión con tecnología de vanguardia. Somos el socio estratégico que impulsa la transformación digital en LATAM.",
+    "services": "Servicios",
+    "company": "Empresa",
+    "contactTitle": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "status": "Global Status: Active",
+    "links": {
+      "networking": "Networking Avanzado",
+      "cybersecurity": "Ciberseguridad",
+      "infrastructure": "Cloud Infrastructure",
+      "development": "Desarrollo Software",
+      "about": "Sobre Nosotros",
+      "insights": "Insights",
+      "legal": "Legal"
+    }
+  },
+  "about": {
+    "badge": "Sobre Dajek Network",
+    "title": "Impulsando el Futuro Digital",
+    "subtitle": "En Dajek Network, fusionamos innovación tecnológica con experiencia estratégica para transformar empresas en líderes de su industria.",
+    "storyTitle": "Nuestra Historia",
+    "story1": "Fundada con la visión de cerrar la brecha tecnológica en Latinoamérica, Dajek Network ha crecido hasta convertirse en un referente de soluciones IT integrales.",
+    "story2": "Nuestro equipo está compuesto por ingenieros certificados, arquitectos de software y consultores de seguridad que comparten una pasión única: resolver problemas complejos con soluciones elegantes y escalables.",
+    "years": "Años de Innovación",
+    "commitment": "Compromiso",
+    "valuesTitle": "Nuestros Valores",
+    "valuesSubtitle": "Principios fundamentales que guían cada decisión y proyecto.",
+    "ctaTitle": "Únete a nuestra misión",
+    "ctaSubtitle": "¿Buscas un socio tecnológico que entienda tu visión? Hablemos.",
+    "ctaButton": "Contáctanos",
+    "values": {
+      "excellence": { "title": "Excelencia", "desc": "No aceptamos nada menos que la perfección técnica en nuestras entregas." },
+      "integrity": { "title": "Integridad", "desc": "Transparencia total y honestidad en cada interacción con nuestros socios." },
+      "innovation": { "title": "Innovación", "desc": "Buscamos constantemente nuevas formas de superar los desafíos tecnológicos." }
+    }
+  },
+  "serviceDetail": {
+    "back": "Volver a Inicio",
+    "serviceBadge": "Servicio",
+    "description": "En Dajek Network, entendemos que {{service}} es fundamental para el éxito de su empresa. Nuestro enfoque integral combina tecnología de punta con las mejores prácticas de la industria para entregar resultados excepcionales.",
+    "whyUs": "¿Por qué elegirnos?",
+    "whyUsSubtitle": "Tu éxito es nuestra misión. Esto es lo que nos distingue.",
+    "ctaButton": "Solicitar Cotización",
+    "bannerTitle": "¿Listo para llevar {{service}} al siguiente nivel?",
+    "bannerSubtitle": "Contáctanos hoy mismo para una consultoría gratuita y sin compromiso.",
+    "bannerButton": "Hablemos",
+    "features": {
+      "experience": "Experiencia comprobada en el sector.",
+      "custom": "Soluciones personalizadas a sus necesidades.",
+      "support": "Soporte técnico dedicado y monitoreo proactivo.",
+      "innovation": "Innovación constante y adopción de nuevas tecnologías."
+    }
+  },
+  "methodologies": {
+    "title": "Metodologías de Clase Mundial",
+    "subtitle": "Nuestros procesos están certificados y alineados con los estándares internacionales más rigurosos para asegurar la excelencia en cada proyecto.",
+    "itil": "Gestión de servicios basada en ITIL v4",
+    "scrum": "Desarrollo ágil con marcos SCRUM y Kanban",
+    "pmi": "Gestión de proyectos bajo estándares PMI"
+  },
+  "cta": {
+    "title": "¿Listo para modernizar su infraestructura TI?",
+    "subtitle": "Agenda una consulta estratégica gratuita con nuestros arquitectos de soluciones y descubre el potencial de tu negocio.",
+    "primary": "Comenzar Ahora",
+    "secondary": "Descargar Portafolio"
+  },
+  "testimonials": {
+    "badge": "Testimonios",
+    "title": "Lo que dicen nuestros clientes",
+    "subtitle": "La confianza de nuestros clientes es nuestra mayor recompensa."
+  }
+}

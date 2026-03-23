@@ -1,0 +1,39 @@
+# Dependencias
+node_modules
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Scripts temporales de utilería (descarga de logos, etc.)
+dl.sh
+dl_*.py
+dl_*.js
+dl_*.cjs
+download_*.py
+fetch_*.py
+get_images.py
+identify_img.*
+process_*.py
+test_dl.py
+logo_urls.txt
+metadata.json
