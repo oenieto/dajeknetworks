@@ -1,0 +1,87 @@
+/* ── Google Fonts — must be before @tailwind directives ───── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ────────────────────────────────────────── */
+@layer base {
+  :root {
+    --pattern-color: #bae6fd; /* Sky 200 — light mode */
+  }
+  .dark {
+    --pattern-color: #38bdf8; /* Sky 400 — dark mode */
+  }
+
+  body {
+    @apply bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-slate-300 antialiased transition-colors duration-300;
+    font-family: "Inter", sans-serif;
+  }
+}
+
+/* ── Component Utilities ──────────────────────────────────── */
+@layer utilities {
+  /* Glassmorphism card */
+  .glass-card {
+    @apply bg-white/70 dark:bg-[#0f172a]/80 backdrop-blur-md border border-slate-200 dark:border-sky-400/10;
+  }
+
+  /* Gradient text (blue → violet) */
+  .gradient-text {
+    background: linear-gradient(to right, #0ea5e9, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .dark .gradient-text {
+    background: linear-gradient(to right, #38bdf8, #0ea5e9, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Hero mesh background */
+  .hero-mesh {
+    background-image:
+      radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.1) 0, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(79, 70, 229, 0.1) 0, transparent 50%);
+  }
+
+  .dark .hero-mesh {
+    background-image:
+      radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(79, 70, 229, 0.1) 0, transparent 50%);
+  }
+
+  /* Entrance animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Scrollbar ────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-50 dark:bg-[#020617];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 dark:bg-[#1e293b];
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-sky-500;
+}
