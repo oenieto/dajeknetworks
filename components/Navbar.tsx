@@ -89,13 +89,13 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo Section */}
-          <Link to="/" className="flex-shrink-0 flex items-center gap-3" onClick={() => window.scrollTo(0,0)}>
-            <img src="/dajek_nobg.png" alt="Dajek Logo" className="h-16 w-auto" />
-            <div>
-              <span className="font-bold text-xl tracking-tight text-slate-800 dark:text-white block leading-none">
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0" onClick={() => window.scrollTo(0, 0)}>
+            <img src="/dajek_nobg.png" alt="Dajek Logo" className="h-10 sm:h-12 md:h-16 w-auto flex-shrink-0" />
+            <div className="min-w-0 flex flex-col">
+              <span className="font-bold text-base sm:text-xl tracking-tight text-slate-800 dark:text-white block leading-none truncate">
                 DAJEK<span className="text-primary">NETWORK</span>
               </span>
-              <span className="text-[0.6rem] text-slate-500 dark:text-slate-400 uppercase tracking-widest block font-medium">
+              <span className="text-[0.55rem] sm:text-[0.6rem] text-slate-500 dark:text-slate-400 uppercase tracking-widest sm:block font-medium truncate hidden">
                 {t('nav.subtitle')}
               </span>
             </div>
@@ -130,14 +130,14 @@ const Navbar: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center gap-3">
+          <div className="md:hidden flex items-center gap-1 sm:gap-3 flex-shrink-0 ml-2">
             <LanguageSelector />
             <ThemeToggle />
             <button
-              className="text-slate-600 dark:text-slate-300 hover:text-primary focus:outline-none"
+              className="text-slate-600 dark:text-slate-300 hover:text-primary focus:outline-none p-1"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              <span className="material-symbols-outlined text-3xl">
+              <span className="material-symbols-outlined text-2xl sm:text-3xl block">
                 {isMenuOpen ? "close" : "menu"}
               </span>
             </button>
