@@ -12,8 +12,17 @@ const ContactForm: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const subject = `Interés en Servicios de ${formData.service} - ${formData.name}`;
-        const body = `Hola Dajek Network,\n\nSoy ${formData.name} y estoy interesado en sus servicios de ${formData.service}.\n\nMensaje:\n${formData.message}\n\nMi correo de contacto es: ${formData.email}`;
+        
+        // Sanitizar inputs removiendo saltos de linea maliciosos para evitar inyeccion de cabeceras en mailto
+        const sanitizeInput = (str: string) => str.replace(/[\r\n]+/g, ' ');
+        
+        const cleanName = sanitizeInput(formData.name);
+        const cleanService = sanitizeInput(formData.service);
+        const cleanEmail = sanitizeInput(formData.email);
+        const cleanMessage = formData.message.replace(/\r/g, ''); // Permitimos \n en el mensaje pero normalizamos
+
+        const subject = `Interés en Servicios de ${cleanService} - ${cleanName}`;
+        const body = `Hola Dajek Network,\n\nSoy ${cleanName} y estoy interesado en sus servicios de ${cleanService}.\n\nMensaje:\n${cleanMessage}\n\nMi correo de contacto es: ${cleanEmail}`;
         window.location.href = `mailto:genaro.lopez@dajeknetwork.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     };
 

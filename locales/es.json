@@ -154,5 +154,18 @@
     "badge": "Testimonios",
     "title": "Lo que dicen nuestros clientes",
     "subtitle": "La confianza de nuestros clientes es nuestra mayor recompensa."
+  },
+  "insights": {
+    "badge": "Insights",
+    "title": "Insights & Noticias",
+    "subtitle": "Análisis profundos y novedades sobre tecnología, negocios e innovación.",
+    "minRead": "min de lectura",
+    "readMore": "Leer más",
+    "notFound": "Artículo no encontrado",
+    "backToInsights": "Volver a Insights",
+    "ctaTitle": "¿Necesita asesoría especializada?",
+    "ctaSubtitle": "Nuestros expertos en infraestructura corporativa están listos para ayudarle.",
+    "ctaButton": "Contactar Experto",
+    "relatedTitle": "Artículos Relacionados"
   }
 }
