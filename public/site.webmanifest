@@ -1,0 +1,21 @@
+{
+  "name": "Dajek Network",
+  "short_name": "Dajek",
+  "description": "Soluciones tecnológicas integrales: Redes, Ciberseguridad, y Desarrollo de Software en LATAM.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/dajek_icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/dajek_icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

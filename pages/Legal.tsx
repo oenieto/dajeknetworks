@@ -1,8 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 
 const Legal: React.FC = () => {
     return (
         <div className="min-h-screen pt-32 pb-20 bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-slate-300 transition-colors duration-300">
+            <SEO 
+                title="Aviso Legal y Privacidad" 
+                description="Términos y condiciones, aviso de privacidad y políticas de uso de Dajek Network."
+                url="https://dajeknetwork.com/legal"
+            />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h1 className="text-4xl font-extrabold text-slate-900 dark:text-white mb-8">Información Legal</h1>
                 

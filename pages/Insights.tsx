@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import { articles } from '../data/articles';
 
 const Insights: React.FC = () => {
@@ -9,6 +10,11 @@ const Insights: React.FC = () => {
 
     return (
         <div className="min-h-screen pt-32 pb-20 bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-slate-300 transition-colors duration-300">
+            <SEO 
+                title={t('insights.title')} 
+                description={t('insights.subtitle')}
+                url="https://dajeknetwork.com/insights"
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header */}

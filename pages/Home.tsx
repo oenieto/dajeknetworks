@@ -7,6 +7,7 @@ import Testimonials from '../components/Testimonials';
 import Methodologies from '../components/Methodologies';
 import CTA from '../components/CTA';
 import ContactForm from '../components/ContactForm';
+import SEO from '../components/SEO';
 import { useLocation } from 'react-router-dom';
 
 const Home: React.FC = () => {
@@ -25,6 +26,11 @@ const Home: React.FC = () => {
 
     return (
         <>
+            <SEO 
+                title="Especialistas en TI y Soluciones Digitales" 
+                description="Dajek Network: transformamos la infraestructura digital de su empresa con arquitectura de redes robusta, ciberseguridad avanzada y desarrollo de software."
+                url="https://dajeknetwork.com"
+            />
             <Hero />
             <Stats />
             <Services />

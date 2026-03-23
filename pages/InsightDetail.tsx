@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import { getArticleBySlug, articles } from '../data/articles';
 
 // ── Simple markdown-to-JSX renderer for bold/headers ──────────────────────
@@ -71,7 +72,13 @@ const InsightDetail: React.FC = () => {
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-[#020617] transition-colors duration-300">
-
+            <SEO 
+                title={article.title[lang]} 
+                description={article.excerpt[lang]}
+                image={article.image}
+                type="article"
+                url={`https://dajeknetwork.com/insights/${article.slug}`}
+            />
             {/* ── Hero Image Banner ──────────────────────────────────── */}
             <div className="relative h-72 md:h-96 overflow-hidden">
                 <img

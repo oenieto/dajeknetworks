@@ -1,13 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import SEO from '../components/SEO';
 import CTA from '../components/CTA';
 
 const About: React.FC = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-[#020617] text-slate-900 dark:text-slate-300 transition-colors duration-300">
+        <div className="min-h-screen pt-20 bg-slate-50 dark:bg-[#020617] transition-colors duration-300">
+            <SEO 
+                title={t('about.title')} 
+                description={t('about.subtitle')}
+                url="https://dajeknetwork.com/about"
+            />
             {/* Hero Section */}
             <div className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
                 <div className="absolute inset-0 opacity-20 dark:opacity-10 pointer-events-none">
