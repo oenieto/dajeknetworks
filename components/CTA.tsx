@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const CTA: React.FC = () => {
@@ -26,15 +27,13 @@ const CTA: React.FC = () => {
                         <span className="material-symbols-outlined text-xl">rocket_launch</span>
                         {t('cta.primary')}
                     </a>
-                    <a
-                        href="https://wa.me/525560310863?text=Hola,%20quisiera%20solicitar%20el%20portafolio%20de%20Dajek%20Network."
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <Link
+                        to="/portfolio"
                         className="px-10 py-5 bg-transparent border-2 border-white/40 hover:bg-white/10 text-white font-bold rounded-2xl transition-all inline-flex items-center justify-center gap-2"
                     >
-                        <span className="material-symbols-outlined text-xl">download</span>
+                        <span className="material-symbols-outlined text-xl">photo_library</span>
                         {t('cta.secondary')}
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

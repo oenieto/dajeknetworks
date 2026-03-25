@@ -8,6 +8,7 @@
   "nav": {
     "services": "Serviços",
     "about": "Sobre Nós",
+    "portfolio": "Portfólio",
     "contact": "Contato",
     "subtitle": "Soluções Tecnológicas"
   },
@@ -135,7 +136,12 @@
       "custom": "Soluções personalizadas para suas necessidades.",
       "support": "Suporte técnico dedicado e monitoramento proativo.",
       "innovation": "Inovação constante e adoção de novas tecnologias."
-    }
+    },
+    "worksLabel": "Nosso trabalho",
+    "worksTitle": "Projetos Realizados",
+    "worksMore": "Ver mais projetos",
+    "detailBadge": "O que fazemos",
+    "detailTitle": "Serviços e Capacidades Detalhadas"
   },
   "methodologies": {
     "title": "Metodologias de Classe Mundial",
@@ -148,7 +154,7 @@
     "title": "Pronto para modernizar sua infraestrutura de TI?",
     "subtitle": "Agende uma consulta estratégica gratuita com nossos arquitetos de soluções e descubra o potencial do seu negócio.",
     "primary": "Começar Agora",
-    "secondary": "Baixar Portfólio"
+    "secondary": "Ver Portfólio"
   },
   "testimonials": {
     "badge": "Depoimentos",
@@ -167,5 +173,20 @@
     "ctaSubtitle": "Nossos especialistas em infraestrutura corporativa estão prontos para ajudar.",
     "ctaButton": "Contatar Especialista",
     "relatedTitle": "Artigos Relacionados"
+  },
+  "portfolio": {
+    "badge": "Portfólio",
+    "title": "Nosso Trabalho",
+    "subtitle": "Projetos reais que demonstram nossa expertise e compromisso com a excelência técnica.",
+    "seoTitle": "Portfólio de Projetos - Dajek Network",
+    "seoDesc": "Conheça os projetos de networking, infraestrutura, cibersegurança e mais realizados pela Dajek Network.",
+    "all": "Todos",
+    "featured": "Destaque",
+    "goToService": "Ver serviço:",
+    "project": "projeto",
+    "projects": "projetos",
+    "empty": "Nenhum projeto disponível para este filtro.",
+    "ctaTitle": "Tem um projeto em mente?",
+    "ctaSubtitle": "Entre em contato e solicite um orçamento com nossos especialistas."
   }
 }

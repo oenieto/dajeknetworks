@@ -8,6 +8,7 @@
   "nav": {
     "services": "Servicios",
     "about": "Nosotros",
+    "portfolio": "Portafolio",
     "contact": "Contactar",
     "subtitle": "Soluciones Tecnológicas"
   },
@@ -135,7 +136,12 @@
       "custom": "Soluciones personalizadas a sus necesidades.",
       "support": "Soporte técnico dedicado y monitoreo proactivo.",
       "innovation": "Innovación constante y adopción de nuevas tecnologías."
-    }
+    },
+    "worksLabel": "Nuestro trabajo",
+    "worksTitle": "Proyectos Realizados",
+    "worksMore": "Ver más proyectos",
+    "detailBadge": "Lo que hacemos",
+    "detailTitle": "Servicios y Capacidades Detalladas"
   },
   "methodologies": {
     "title": "Metodologías de Clase Mundial",
@@ -148,7 +154,7 @@
     "title": "¿Listo para modernizar su infraestructura TI?",
     "subtitle": "Agenda una consulta estratégica gratuita con nuestros arquitectos de soluciones y descubre el potencial de tu negocio.",
     "primary": "Comenzar Ahora",
-    "secondary": "Descargar Portafolio"
+    "secondary": "Ver Portafolio"
   },
   "testimonials": {
     "badge": "Testimonios",
@@ -167,5 +173,20 @@
     "ctaSubtitle": "Nuestros expertos en infraestructura corporativa están listos para ayudarle.",
     "ctaButton": "Contactar Experto",
     "relatedTitle": "Artículos Relacionados"
+  },
+  "portfolio": {
+    "badge": "Portafolio",
+    "title": "Nuestros Trabajos",
+    "subtitle": "Proyectos reales que demuestran nuestra experiencia y compromiso con la excelencia técnica.",
+    "seoTitle": "Portafolio de Proyectos - Dajek Network",
+    "seoDesc": "Conoce los proyectos de networking, infraestructura, ciberseguridad y más realizados por Dajek Network.",
+    "all": "Todos",
+    "featured": "Destacado",
+    "goToService": "Ver servicio:",
+    "project": "proyecto",
+    "projects": "proyectos",
+    "empty": "No hay proyectos disponibles para este filtro.",
+    "ctaTitle": "¿Tienes un proyecto en mente?",
+    "ctaSubtitle": "Contáctanos y cotiza tu proyecto con nuestros especialistas."
   }
 }

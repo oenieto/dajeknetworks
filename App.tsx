@@ -8,6 +8,7 @@ import About from './pages/About';
 import Legal from './pages/Legal';
 import Insights from './pages/Insights';
 import InsightDetail from './pages/InsightDetail';
+import Portfolio from './pages/Portfolio';
 import WhatsAppButton from './components/WhatsAppButton';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -25,6 +26,7 @@ function App() {
             <Route path="/legal" element={<Legal />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/insights/:slug" element={<InsightDetail />} />
+            <Route path="/portfolio" element={<Portfolio />} />
           </Routes>
         </main>
         <WhatsAppButton />

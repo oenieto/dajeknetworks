@@ -8,6 +8,7 @@
   "nav": {
     "services": "Services",
     "about": "About Us",
+    "portfolio": "Portfolio",
     "contact": "Contact",
     "subtitle": "Technology Solutions"
   },
@@ -135,7 +136,12 @@
       "custom": "Customized solutions for your needs.",
       "support": "Dedicated technical support and proactive monitoring.",
       "innovation": "Constant innovation and adoption of new technologies."
-    }
+    },
+    "worksLabel": "Our work",
+    "worksTitle": "Projects Delivered",
+    "worksMore": "View more projects",
+    "detailBadge": "What we do",
+    "detailTitle": "Detailed Services & Capabilities"
   },
   "methodologies": {
     "title": "World-Class Methodologies",
@@ -148,7 +154,7 @@
     "title": "Ready to modernize your IT infrastructure?",
     "subtitle": "Schedule a free strategic consultation with our solutions architects and discover your business potential.",
     "primary": "Get Started",
-    "secondary": "Download Portfolio"
+    "secondary": "View Portfolio"
   },
   "testimonials": {
     "badge": "Testimonials",
@@ -167,5 +173,20 @@
     "ctaSubtitle": "Our corporate infrastructure experts are ready to help.",
     "ctaButton": "Contact Expert",
     "relatedTitle": "Related Articles"
+  },
+  "portfolio": {
+    "badge": "Portfolio",
+    "title": "Our Work",
+    "subtitle": "Real projects that demonstrate our expertise and commitment to technical excellence.",
+    "seoTitle": "Project Portfolio - Dajek Network",
+    "seoDesc": "Explore networking, infrastructure, cybersecurity and more projects delivered by Dajek Network.",
+    "all": "All",
+    "featured": "Featured",
+    "goToService": "View service:",
+    "project": "project",
+    "projects": "projects",
+    "empty": "No projects available for this filter.",
+    "ctaTitle": "Have a project in mind?",
+    "ctaSubtitle": "Contact us and get a quote from our specialists."
   }
 }

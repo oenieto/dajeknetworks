@@ -115,6 +115,12 @@ const Navbar: React.FC = () => {
             >
               {t('nav.about')}
             </Link>
+            <Link
+              to="/portfolio"
+              className="text-slate-600 dark:text-slate-300 hover:text-primary font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-white/5"
+            >
+              {t('nav.portfolio')}
+            </Link>
 
             <div className="w-px h-6 bg-slate-200 dark:bg-white/10 mx-1" />
 
@@ -161,6 +167,13 @@ const Navbar: React.FC = () => {
                onClick={() => setIsMenuOpen(false)}
             >
               {t('nav.about')}
+            </Link>
+            <Link
+               to="/portfolio"
+               className="block w-full text-left px-3 py-3 text-base font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5 rounded-lg"
+               onClick={() => setIsMenuOpen(false)}
+            >
+              {t('nav.portfolio')}
             </Link>
             <div className="pt-4">
               <button
