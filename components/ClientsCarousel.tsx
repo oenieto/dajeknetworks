@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 const clients = [
   { name: 'Red de Universidades Anáhuac', logo: '/clients/anahuac.png' },
   { name: 'MultiCarrier', logo: '/clients/multicarrier.png' },
-  { name: 'Fortes In Proelio', logo: '/clients/fortes.png' },
+  { name: 'Colegio Mercedes', logo: '/clients/fortes.png' },
   { name: 'FESOgo', svg: 'fesogo' },
   { name: 'Distribuidora ORTHO', svg: 'ortho' },
   { name: 'Universidad Iberoamericana Puebla', logo: 'https://unavatar.io/x/IberoPuebla' },
