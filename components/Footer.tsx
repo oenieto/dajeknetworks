@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                             <li className="flex items-start group">
                                 <span className="material-symbols-outlined text-primary text-xl mr-3">location_on</span>
                                 <span className="text-slate-600 dark:text-slate-500 text-sm group-hover:text-slate-800 dark:group-hover:text-slate-400 transition-colors">
-                                    Av. Tecnológica 123, Piso 4<br/>Parque Industrial IT
+                                    Fresno 192, Col. Santa María La Ribera<br/>06400
                                 </span>
                             </li>
                             <li className="flex items-center group">
