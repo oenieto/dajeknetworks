@@ -80,26 +80,32 @@ const Portfolio: React.FC = () => {
                     <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-blue-600/10 rounded-full blur-3xl" />
                 </div>
 
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                    <Link
-                        to="/#services"
-                        className="inline-flex items-center text-sm font-medium text-primary hover:text-sky-400 mb-10 transition-colors"
-                    >
-                        <span className="material-symbols-outlined mr-2">arrow_back</span>
-                        {t('serviceDetail.back')}
-                    </Link>
-
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
-                        <span className="material-symbols-outlined text-sm">photo_library</span>
-                        <span className="text-xs font-bold uppercase tracking-widest">{t('portfolio.badge')}</span>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    {/* Back Link positioned to the left */}
+                    <div className="flex justify-start mb-10">
+                        <Link
+                            to="/#services"
+                            className="inline-flex items-center text-sm font-medium text-primary hover:text-sky-400 transition-colors"
+                        >
+                            <span className="material-symbols-outlined mr-2 border border-transparent">arrow_back</span>
+                            {t('serviceDetail.back')}
+                        </Link>
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
-                        {t('portfolio.title')}
-                    </h1>
-                    <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                        {t('portfolio.subtitle')}
-                    </p>
+                    {/* Centered Hero Content */}
+                    <div className="text-center">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary mb-6">
+                            <span className="material-symbols-outlined text-sm">photo_library</span>
+                            <span className="text-xs font-bold uppercase tracking-widest">{t('portfolio.badge')}</span>
+                        </div>
+
+                        <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+                            {t('portfolio.title')}
+                        </h1>
+                        <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                            {t('portfolio.subtitle')}
+                        </p>
+                    </div>
                 </div>
             </div>
 
