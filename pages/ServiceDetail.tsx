@@ -160,11 +160,11 @@ const ServiceDetail: React.FC = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {detail.images.map((img, idx) => (
-                                <div key={idx} className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-white/10 group">
+                                <div key={idx} className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-white/10 group bg-slate-100 dark:bg-slate-800">
                                     <img 
                                         src={img} 
                                         alt={`${serviceTitle} preview ${idx + 1}`} 
-                                        className="w-full h-auto max-h-[500px] object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                        className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                                         loading="lazy" 
                                     />
                                 </div>
