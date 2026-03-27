@@ -33,6 +33,7 @@ export interface ServiceDetailData {
         labelEn: string;
         labelPt: string;
     }[];
+    images?: string[];
 }
 
 export const serviceDetailsMap: Record<string, ServiceDetailData> = {
@@ -40,9 +41,13 @@ export const serviceDetailsMap: Record<string, ServiceDetailData> = {
     // ─── NETWORKING ────────────────────────────────────────────────────────────
     networking: {
         id: 'networking',
-        introEs: 'Soluciones que cumplen con altos estándares, con procesos basados en las mejores prácticas del mercado. Utilizamos metodologías como ITIL, SCRUM y PMI para garantizar la calidad de nuestros servicios. Hemos logrado la construcción e interoperabilidad de diversas redes con diferentes fabricantes.',
-        introEn: 'Solutions that meet high standards, with processes based on market best practices. We use methodologies such as ITIL, SCRUM and PMI to ensure the quality of our services. We have achieved the construction and interoperability of diverse networks with different manufacturers.',
-        introPt: 'Soluções que atendem a altos padrões, com processos baseados nas melhores práticas do mercado. Utilizamos metodologias como ITIL, SCRUM e PMI para garantir a qualidade dos nossos serviços. Alcançamos a construção e interoperabilidade de diversas redes com diferentes fabricantes.',
+        introEs: 'En DAJEKNETWORK, entendemos el networking como la base de la conectividad moderna. Diseñamos e implementamos soluciones de interconexión que permiten a empresas, organizaciones y usuarios mantenerse siempre comunicados de forma eficiente, segura y confiable.\n\nNuestra infraestructura de red está enfocada en ofrecer alto desempeño, baja latencia y máxima disponibilidad, garantizando la continuidad operativa de nuestros clientes. Integramos tecnologías avanzadas para optimizar el flujo de datos, facilitar la comunicación entre sedes y asegurar el acceso a servicios críticos en todo momento.\n\nA través de nuestras soluciones de networking, ayudamos a las empresas a crecer, escalar sus operaciones y adaptarse a las demandas del entorno digital actual, brindando soporte especializado y un enfoque personalizado en cada proyecto.',
+        introEn: 'At DAJEKNETWORK, we understand networking as the foundation of modern connectivity. We design and implement interconnection solutions that allow companies, organizations, and users to stay communicated efficiently, securely, and reliably always.\n\nOur network infrastructure is focused on offering high performance, low latency, and maximum availability, guaranteeing our clients\' operational continuity. We integrate advanced technologies to optimize data flow, facilitate communication between sites, and assure access to critical services at all times.\n\nThrough our networking solutions, we help companies grow, scale their operations, and adapt to the demands of the current digital environment, providing specialized support and a personalized approach for every project.',
+        introPt: 'Na DAJEKNETWORK, entendemos o networking como a base da conectividade moderna. Desenhamos e implementamos soluções de interconexão que permitem a empresas, organizações e usuários manterem-se sempre comunicados de forma eficiente, segura e confiável.\n\nNossa infraestrutura de rede é focada em oferecer alto desempenho, baixa latência e máxima disponibilidade, garantindo a continuidade operacional dos nossos clientes. Integramos tecnologias avançadas para otimizar o fluxo de dados, facilitar a comunicação entre sedes e assegurar o acesso a serviços críticos em todos os momentos.\n\nAtravés de nossas soluções de networking, ajudamos as empresas a crescer, escalar suas operações e adaptar-se às demandas do ambiente digital atual, fornecendo suporte especializado e uma abordagem personalizada em cada projeto.',
+        images: [
+            '/portfolio/networking-rack-1.jpg',
+            '/portfolio/networking-rack-2.jpeg'
+        ],
         subcategories: [
             {
                 icon: 'settings_ethernet',
@@ -292,6 +297,10 @@ export const serviceDetailsMap: Record<string, ServiceDetailData> = {
         introEs: 'Transformamos edificios convencionales en espacios inteligentes, seguros y eficientes. Integramos tecnologías de automatización, videovigilancia, control de acceso y sistemas IoT para optimizar la operación y la seguridad de sus instalaciones.',
         introEn: 'We transform conventional buildings into intelligent, secure and efficient spaces. We integrate automation technologies, video surveillance, access control and IoT systems to optimize the operation and security of your facilities.',
         introPt: 'Transformamos edifícios convencionais em espaços inteligentes, seguros e eficientes. Integramos tecnologias de automação, videovigilância, controle de acesso e sistemas IoT para otimizar a operação e a segurança das suas instalações.',
+        images: [
+            '/portfolio/smart-pole-cameras.jpeg',
+            '/portfolio/smart-access-control.jpeg'
+        ],
         subcategories: [
             {
                 icon: 'videocam',

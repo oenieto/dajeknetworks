@@ -125,7 +125,7 @@ const ServiceDetail: React.FC = () => {
                             <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
                                 {serviceTitle}
                             </h1>
-                            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+                            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8 whitespace-pre-line">
                                 {intro}
                             </p>
                             {/* Methodology badges */}
@@ -153,6 +153,26 @@ const ServiceDetail: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* ─── Service Image Gallery ────────────────────────────────────── */}
+            {detail?.images && detail.images.length > 0 && (
+                <div className="py-12 bg-white dark:bg-[#020617]">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {detail.images.map((img, idx) => (
+                                <div key={idx} className="relative rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-white/10 group">
+                                    <img 
+                                        src={img} 
+                                        alt={`${serviceTitle} preview ${idx + 1}`} 
+                                        className="w-full h-auto max-h-[500px] object-cover transform transition-transform duration-700 group-hover:scale-105"
+                                        loading="lazy" 
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            )}
 
             {/* ─── Highlights Strip ─────────────────────────────────────────── */}
             {detail?.highlights && (
