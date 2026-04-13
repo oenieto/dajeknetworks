@@ -13,13 +13,55 @@ export interface PortfolioItem {
     descriptionEs: string;
     descriptionEn: string;
     descriptionPt: string;
-    image: string;                 // path under /public or external URL
+    image: string;                 // primary image (cover card)
+    images?: string[];             // optional gallery with multiple photos
     tags: string[];
     featured?: boolean;
 }
 
 export const portfolioItems: PortfolioItem[] = [
     // ── PROYECTOS REALES ────────────────────────────────────────────────────────────
+    {
+        id: 'real-05',
+        serviceId: 'smart-buildings',
+        titleEs: 'Centro de Monitoreo CCTV - Nave Industrial',
+        titleEn: 'CCTV Monitoring Center - Industrial Facility',
+        titlePt: 'Centro de Monitoramento CCTV - Instalação Industrial',
+        descriptionEs: 'Diseño, suministro e integración de un Centro de Control y Monitoreo de Videovigilancia para nave industrial. El proyecto incluyó la instalación de un videowall con 8 monitores de gran formato para la visualización simultánea de múltiples cámaras, configuración de estaciones de trabajo con software de gestión VMS, control PTZ de cámaras mediante joysticks especializados, e integración de los racks de grabación y procesamiento en los muebles de operación. El resultado es un centro de seguridad 24/7 con cobertura total del perímetro y zonas internas de la instalación.',
+        descriptionEn: 'Design, supply, and integration of a Video Surveillance Control and Monitoring Center for an industrial facility. The project included the installation of a videowall with 8 large-format monitors for simultaneous multi-camera display, VMS management software workstation setup, PTZ camera control via specialized joysticks, and integration of recording and processing racks into the operator furniture. The result is a 24/7 security center with full coverage of the perimeter and internal areas.',
+        descriptionPt: 'Design, fornecimento e integração de um Centro de Controle e Monitoramento de Videovigilância para instalação industrial. O projeto incluiu a instalação de um videowall com 8 monitores de grande formato para visualização simultânea de múltiplas câmeras, configuração de estações de trabalho com software VMS, controle PTZ de câmeras com joysticks especializados e integração dos racks de gravação nos móveis dos operadores. O resultado é um centro de segurança 24/7 com cobertura total do perímetro.',
+        image: '/portfolio/cctv.jpeg',
+        tags: ['CCTV', 'Videovigilancia', 'VMS', 'Seguridad', 'Centro de Control'],
+        featured: true,
+    },
+    {
+        id: 'real-06',
+        serviceId: 'networking',
+        titleEs: 'Conectividad Industrial - Red de Monitoreo en Plantas de Bombeo',
+        titleEn: 'Industrial Connectivity - Monitoring Network for Water Pump Stations',
+        titlePt: 'Conectividade Industrial - Rede de Monitoramento em Estações de Bombeamento',
+        descriptionEs: 'Implementación de red de comunicaciones industriales para interconectar múltiples plantas de bombeo de agua. Se desplegaron routers industriales Teltonika RUT951 (fabricación española) con conectividad LTE/Wi-Fi dual como nodos de comunicación dentro de gabinetes de control eléctrico, junto con switches industriales con redundancia de fibra óptica. El cableado UTP fue tendido desde registros subterráneos hasta los tableros de fuerza, garantizando supervisión remota en tiempo real del estado operativo de cada planta, alarmas y variables de proceso.',
+        descriptionEn: 'Implementation of an industrial communications network to interconnect multiple water pump stations. Teltonika RUT951 industrial routers (European/Spanish manufacture) with dual LTE/Wi-Fi connectivity were deployed as communication nodes inside electrical control cabinets, alongside industrial switches with fiber optic redundancy. UTP cabling was routed from underground conduits to the power panels, ensuring real-time remote monitoring of each station\'s operational status, alarms, and process variables.',
+        descriptionPt: 'Implementação de rede de comunicações industriais para interligar múltiplas estações de bombeamento de água. Roteadores industriais Teltonika RUT951 (fabricação europeia) com conectividade LTE/Wi-Fi dual foram implantados como nós de comunicação em gabinetes de controle elétrico, junto com switches industriais com redundância de fibra óptica. O cabeamento UTP foi lançado desde registros subterrâneos até os quadros de força, garantindo monitoramento remoto em tempo real do status de cada estação.',
+        image: '/portfolio/networking1.jpeg',
+        images: ['/portfolio/networking1.jpeg', '/portfolio/networking2.jpeg', '/portfolio/networking4.jpeg', '/portfolio/networking-rack-2.jpeg'],
+        tags: ['Teltonika', 'Redes Industriales', 'SCADA', 'Plantas de Bombeo', 'LTE', 'Fibra Óptica'],
+        featured: true,
+    },
+    {
+        id: 'real-07',
+        serviceId: 'infrastructure',
+        titleEs: 'Despliegue de Red ISP - Municipio de Ozumba',
+        titleEn: 'ISP Network Deployment - Ozumba Municipality',
+        titlePt: 'Implantação de Rede ISP - Município de Ozumba',
+        descriptionEs: 'Proyecto de despliegue de infraestructura de red ISP para cobertura de banda ancha en el municipio de Ozumba. El equipo realizó la instalación de cableado aéreo de fibra óptica y red en postes urbanos, incluyendo el tendido desde postes de distribución eléctrica hasta puntos de distribución locales. Los trabajos incluyeron configuración de cuartos de telecomunicaciones con rack de datos (routers, switches, OLT de fibra), peinado y fusión de fibra óptica, e instalación de splitters en poste. Proyecto ejecutado con personal certificado en trabajos en altura.',
+        descriptionEn: 'ISP network infrastructure deployment project for broadband coverage in the Ozumba municipality. The team carried out aerial fiber optic and network cabling on urban utility poles, including drops from distribution poles to local distribution points. Work included configuration of telecommunications rooms with data racks (routers, switches, fiber OLT), fiber splicing and management, and aerial splitter installation on poles. Project executed with height-certified personnel.',
+        descriptionPt: 'Projeto de implantação de infraestrutura de rede ISP para cobertura de banda larga no município de Ozumba. A equipe realizou a instalação de cabeamento aéreo de fibra óptica e rede em postes urbanos, incluindo a descida de postes de distribuição até pontos locais. Os trabalhos incluíram configuração de salas de telecomunicações com rack de dados (roteadores, switches, OLT de fibra), fusão e gestão de fibra óptica e instalação de splitters em poste. Projeto executado com pessoal certificado para trabalhos em altura.',
+        image: '/portfolio/ozumba1.jpeg',
+        images: ['/portfolio/ozumba1.jpeg', '/portfolio/ISP1.jpeg', '/portfolio/ISP2.jpeg', '/portfolio/ISP3.jpeg', '/portfolio/ISP4.jpeg', '/portfolio/ISP5.jpeg'],
+        tags: ['ISP', 'Fibra Óptica', 'Red Aérea', 'OLT', 'Infraestructura', 'Ozumba'],
+        featured: true,
+    },
     {
         id: 'real-01',
         serviceId: 'infrastructure',
