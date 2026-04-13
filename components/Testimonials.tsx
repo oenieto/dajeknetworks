@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 const testimonials = [
     {
-        name: 'Ing. Roberto Sánchez',
+        name: 'Jorge Gómez',
         role: 'Director de TI',
         company: 'Red de Universidades Anáhuac',
         avatar: 'RS',
