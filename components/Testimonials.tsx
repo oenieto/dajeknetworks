@@ -6,7 +6,7 @@ const testimonials = [
         name: 'Jorge Gómez',
         role: 'Director de TI',
         company: 'Red de Universidades Anáhuac',
-        avatar: 'RS',
+        avatar: 'JG',
         color: 'from-blue-500 to-indigo-600',
         quote: {
             es: 'Dajek Network transformó por completo nuestra infraestructura de red. La implementación fue impecable, el soporte 24/7 es excepcional y el equipo demostró un nivel de expertise que superó nuestras expectativas.',
