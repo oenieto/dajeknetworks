@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
@@ -31,6 +31,26 @@ const Portfolio: React.FC = () => {
     const { t, i18n } = useTranslation();
     const [searchParams, setSearchParams] = useSearchParams();
     const [hoveredId, setHoveredId] = useState<string | null>(null);
+    // Track active image index per card for auto-rotation
+    const [activeImageIndex, setActiveImageIndex] = useState<Record<string, number>>({});
+    const intervalRefs = useRef<Record<string, ReturnType<typeof setInterval>>>({});
+
+    // Start/stop rotation when hovering
+    const startRotation = (itemId: string, totalImages: number) => {
+        if (intervalRefs.current[itemId]) return;
+        intervalRefs.current[itemId] = setInterval(() => {
+            setActiveImageIndex(prev => ({
+                ...prev,
+                [itemId]: ((prev[itemId] ?? 0) + 1) % totalImages,
+            }));
+        }, 2500);
+    };
+    const stopRotation = (itemId: string) => {
+        clearInterval(intervalRefs.current[itemId]);
+        delete intervalRefs.current[itemId];
+    };
+    // Cleanup on unmount
+    useEffect(() => () => { Object.values(intervalRefs.current).forEach(clearInterval); }, []);
 
     const localField = useLocalizedField();
 
@@ -154,19 +174,61 @@ const Portfolio: React.FC = () => {
                                         key={item.id}
                                         id={`portfolio-item-${item.id}`}
                                         className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:shadow-sky-500/10 transition-all duration-500 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5"
-                                        onMouseEnter={() => setHoveredId(item.id)}
-                                        onMouseLeave={() => setHoveredId(null)}
+                                        onMouseEnter={() => {
+                                            setHoveredId(item.id);
+                                            if (item.images && item.images.length > 1) {
+                                                startRotation(item.id, item.images.length);
+                                            }
+                                        }}
+                                        onMouseLeave={() => {
+                                            setHoveredId(null);
+                                            stopRotation(item.id);
+                                            setActiveImageIndex(prev => ({ ...prev, [item.id]: 0 }));
+                                        }}
                                     >
-                                        {/* Image */}
+                                        {/* Image with rotation support */}
                                         <div className="relative aspect-[4/3] overflow-hidden">
-                                            <img
-                                                src={item.image}
-                                                alt={title}
-                                                loading="lazy"
-                                                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
-                                            />
+                                            {item.images && item.images.length > 1 ? (
+                                                // Multi-image: render all, fade between them
+                                                item.images.map((src, idx) => (
+                                                    <img
+                                                        key={src}
+                                                        src={src}
+                                                        alt={`${title} ${idx + 1}`}
+                                                        loading="lazy"
+                                                        className={`absolute inset-0 w-full h-full object-cover transform transition-all duration-700 ${
+                                                            (activeImageIndex[item.id] ?? 0) === idx
+                                                                ? 'opacity-100 scale-105'
+                                                                : 'opacity-0 scale-100'
+                                                        } group-hover:scale-110`}
+                                                    />
+                                                ))
+                                            ) : (
+                                                <img
+                                                    src={item.image}
+                                                    alt={title}
+                                                    loading="lazy"
+                                                    className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
+                                                />
+                                            )}
                                             {/* Dark overlay on hover */}
                                             <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 ${hoveredId === item.id ? 'opacity-100' : 'opacity-0'}`} />
+
+                                            {/* Image counter dots for galleries */}
+                                            {item.images && item.images.length > 1 && (
+                                                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+                                                    {item.images.map((_, idx) => (
+                                                        <span
+                                                            key={idx}
+                                                            className={`block rounded-full transition-all duration-300 ${
+                                                                (activeImageIndex[item.id] ?? 0) === idx
+                                                                    ? 'w-4 h-1.5 bg-white'
+                                                                    : 'w-1.5 h-1.5 bg-white/50'
+                                                            }`}
+                                                        />
+                                                    ))}
+                                                </div>
+                                            )}
 
                                             {/* Featured badge */}
                                             {item.featured && (
