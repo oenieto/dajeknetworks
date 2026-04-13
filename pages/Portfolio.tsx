@@ -2,37 +2,16 @@ import React, { useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
-import { serviceIds } from '../components/Services';
+import { serviceIds, serviceIcons } from '../components/Services';
 import { portfolioItems } from '../data/portfolioData';
 import PortfolioCard from '../components/PortfolioCard';
 
-// Helper to pick the right localized field
-const useLocalizedField = () => {
-    const { i18n } = useTranslation();
-    return (item: { titleEs: string; titleEn: string; titlePt: string } |
-        { descriptionEs: string; descriptionEn: string; descriptionPt: string },
-        field: 'title' | 'description'
-    ) => {
-        const lang = i18n.language;
-        if (field === 'title') {
-            const t = item as { titleEs: string; titleEn: string; titlePt: string };
-            if (lang === 'en') return t.titleEn;
-            if (lang === 'pt') return t.titlePt;
-            return t.titleEs;
-        } else {
-            const d = item as { descriptionEs: string; descriptionEn: string; descriptionPt: string };
-            if (lang === 'en') return d.descriptionEn;
-            if (lang === 'pt') return d.descriptionPt;
-            return d.descriptionEs;
-        }
-    };
-};
+
 
 const Portfolio: React.FC = () => {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     const [searchParams, setSearchParams] = useSearchParams();
 
-    const localField = useLocalizedField();
 
     // Read ?service=networking from URL (set by ServiceDetail "ver más")
     const activeFilter = searchParams.get('service') ?? 'all';
