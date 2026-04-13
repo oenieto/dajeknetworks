@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const clients = [
-  { name: 'Red de Universidades Anáhuac', logo: '/clients/anahuac.png' },
+  { name: 'Red de Universidades Anáhuac', logo: '/clients/anahuac.svg' },
   { name: 'MultiCarrier', logo: '/clients/multicarrier.png' },
   { name: 'Colegio Mercedes', logo: '/clients/fortes.png' },
   { name: 'FESOgo', svg: 'fesogo' },
@@ -15,7 +15,7 @@ const clients = [
   { name: 'CONAGUA', logo: 'https://unavatar.io/x/conagua_mx' },
   { name: 'WEG', logo: '/clients/weg.svg' },
   { name: 'ECOMA', svg: 'ecoma' },
-  { name: 'ABInBev / Grupo Modelo', logo: '/clients/abinbev.png' },
+  { name: 'ABInBev / Grupo Modelo', logo: '/clients/grupomodelo.png' },
   { name: 'Cinvestav', logo: 'https://unavatar.io/x/cinvestav' },
 ];
 
