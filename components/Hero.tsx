@@ -40,42 +40,59 @@ const Hero: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Image/Visual Content */}
-                    <div className="lg:col-span-6 relative">
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 group bg-slate-900">
-                            <div className="aspect-video relative overflow-hidden">
-                                <img 
-                                    alt="Server Infrastructure" 
-                                    className="object-cover w-full h-full opacity-60 dark:opacity-40 mix-blend-overlay dark:mix-blend-luminosity scale-105 group-hover:scale-110 transition-transform duration-700" 
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvITS2b4WdPgq_qAnoNTEDCUyZjeHM7oBu1goa2X6fIeGN-0pV0oqt1B4qMpQjF8X77uoaYiz-FqEUaEKcXHBGAkLQyFUvDoO6wnjpFooXzAmydxyQrp1O0qoBm9N0-zOI1gVyTPeWtmkZsqd_aCoP1hRDvsfIKAaVwj8tl2UDP_AsLgcovW_UAYF0q0wYgqBZkmDcrNGIFH5pd3DpZ7gKTybfiwWVWmqiMZPkYcady41vyj64xnEctMwqJzovfsZYVsmxxE0egF0A"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-tr from-[#020617] via-transparent to-primary/10"></div>
-                                
-                                {/* Overlay 1: System Status */}
-                                <div className="absolute top-8 left-8 p-4 glass-card rounded-2xl border-l-4 border-primary">
-                                    <div className="flex items-center space-x-3">
-                                        <div className="bg-emerald-500 h-2.5 w-2.5 rounded-full animate-ping"></div>
-                                        <span className="text-xs font-mono text-slate-800 dark:text-slate-200 uppercase tracking-widest">{t('hero.system_status')}</span>
+                    {/* Image/Visual Content (Bento Grid) */}
+                    <div className="lg:col-span-6 relative h-[450px] sm:h-[550px] mt-12 lg:mt-0">
+                        {/* Decorative Glows */}
+                        <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary/20 rounded-full blur-3xl"></div>
+                        <div className="absolute -z-10 -bottom-10 -right-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
+
+                        <div className="grid grid-cols-2 gap-4 h-full relative z-10 px-2 sm:px-0">
+                            {/* Left Column (Tall Image) */}
+                            <div className="col-span-1 flex flex-col pt-8">
+                                <div className="flex-1 rounded-3xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 group relative bg-slate-100 dark:bg-slate-800">
+                                    <img 
+                                        alt="Infraestructura ISP" 
+                                        className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" 
+                                        src="/portfolio/ISP1.jpeg"
+                                    />
+                                    {/* Overlay */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-4 lg:p-6 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        <div className="translate-y-2 group-hover:translate-y-0 transition-transform">
+                                            <span className="inline-block text-white text-[10px] font-bold uppercase tracking-widest bg-black/40 backdrop-blur-md px-2 py-1 rounded-md mb-2 border border-white/10">Planta Exterior</span>
+                                            <p className="text-white font-medium text-sm hidden sm:block leading-tight text-white/90">Despliegue aéreo de fibra óptica ISP</p>
+                                        </div>
                                     </div>
                                 </div>
-
-                                {/* Overlay 2: Security Stats */}
-                                <div className="absolute bottom-8 right-8 p-6 glass-card rounded-2xl max-w-xs border border-slate-200 dark:border-white/10">
-                                    <div className="flex items-center justify-between mb-3 gap-8">
-                                        <span className="text-xs font-bold text-primary uppercase tracking-tighter">{t('hero.cybersecurity')}</span>
-                                        <span className="material-symbols-outlined text-emerald-500 dark:text-emerald-400 text-xl">verified_user</span>
+                            </div>
+                            
+                            {/* Right Column (Two Stacked Images) */}
+                            <div className="col-span-1 flex flex-col gap-4 pb-8">
+                                <div className="h-2/5 rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-white/10 group relative bg-slate-100 dark:bg-slate-800">
+                                    <img 
+                                        alt="Centro de Datos" 
+                                        className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" 
+                                        src="/portfolio/networking-rack-1.jpg"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-3 lg:p-5 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        <span className="inline-block text-white text-[9px] font-bold uppercase tracking-widest bg-black/40 backdrop-blur-md px-2 py-1 rounded-md border border-white/10 translate-y-1 group-hover:translate-y-0 transition-transform">Networking</span>
                                     </div>
-                                    <div className="w-full bg-slate-200 dark:bg-slate-800 rounded-full h-1.5 mb-2">
-                                        <div className="bg-primary h-1.5 rounded-full" style={{ width: '98%' }}></div>
+                                </div>
+                                
+                                <div className="h-3/5 rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-white/10 group relative bg-slate-100 dark:bg-slate-800">
+                                    <img 
+                                        alt="Seguridad y Control" 
+                                        className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700" 
+                                        src="/portfolio/cctv.jpeg"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent flex items-end p-3 lg:p-5 opacity-90 group-hover:opacity-100 transition-opacity">
+                                        <div className="translate-y-1 group-hover:translate-y-0 transition-transform">
+                                            <span className="inline-block text-white text-[9px] font-bold uppercase tracking-widest bg-black/40 backdrop-blur-md px-2 py-1 rounded-md border border-white/10 mb-1.5">Seguridad</span>
+                                            <p className="text-[11px] hidden sm:block font-medium text-white/90 leading-tight">CCTV y Control de Acceso</p>
+                                        </div>
                                     </div>
-                                    <div className="text-[10px] text-slate-600 dark:text-slate-400 font-mono">{t('hero.encrypted')}</div>
                                 </div>
                             </div>
                         </div>
-                        
-                        {/* Decorative Glows */}
-                        <div className="absolute -z-10 -bottom-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-                        <div className="absolute -z-10 -top-10 -left-10 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl"></div>
                     </div>
                 </div>
             </div>
