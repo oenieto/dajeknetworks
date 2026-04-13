@@ -157,23 +157,47 @@ const ServiceDetail: React.FC = () => {
 
             {/* ─── Service Image Gallery ────────────────────────────────────── */}
             {detail?.images && detail.images.length > 0 && (
-                <div className="py-12 bg-white dark:bg-[#020617]">
+                <div className="py-14 bg-slate-50 dark:bg-[#060f1e] border-t border-b border-slate-200 dark:border-white/5">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Section header */}
+                        <div className="flex items-center gap-3 mb-8">
+                            <div className="w-9 h-9 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
+                                <span className="material-symbols-outlined text-primary" style={{ fontSize: '18px' }}>photo_library</span>
+                            </div>
+                            <div className="flex-1">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-primary mb-0.5">
+                                    {lang === 'en' ? 'Service Gallery' : lang === 'pt' ? 'Galeria do Serviço' : 'Galería del Servicio'}
+                                </p>
+                                <div className="h-px bg-gradient-to-r from-primary/40 to-transparent" />
+                            </div>
+                        </div>
+
+                        {/* Images strip */}
+                        <div className={`grid gap-4 ${detail.images.length === 1 ? 'grid-cols-1 max-w-2xl mx-auto' : detail.images.length === 2 ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'}`}>
                             {detail.images.map((img, idx) => (
-                                <div key={idx} className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-xl border border-slate-200 dark:border-white/10 group bg-slate-100 dark:bg-slate-800">
-                                    <img 
-                                        src={img} 
-                                        alt={`${serviceTitle} preview ${idx + 1}`} 
+                                <div
+                                    key={idx}
+                                    className="group relative w-full aspect-[16/10] rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-white/5 bg-slate-100 dark:bg-slate-800"
+                                >
+                                    <img
+                                        src={img}
+                                        alt={`${serviceTitle} — ${idx + 1}`}
                                         className="absolute inset-0 w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-                                        loading="lazy" 
+                                        loading="lazy"
                                     />
+                                    {/* Subtle gradient bottom */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                                    {/* Photo number chip */}
+                                    <div className="absolute bottom-3 right-3 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
+                                        {idx + 1} / {detail.images.length}
+                                    </div>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
             )}
+
 
             {/* ─── Highlights Strip ─────────────────────────────────────────── */}
             {detail?.highlights && (

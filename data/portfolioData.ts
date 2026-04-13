@@ -51,9 +51,9 @@ export const portfolioItems: PortfolioItem[] = [
     {
         id: 'real-07',
         serviceId: 'infrastructure',
-        titleEs: 'Red Aérea ISP - Tendido en Postes, Municipio de Ozumba',
-        titleEn: 'Aerial ISP Network - Utility Pole Deployment, Ozumba Municipality',
-        titlePt: 'Rede Aérea ISP - Instalação em Postes, Município de Ozumba',
+        titleEs: 'Proyecto ISP (Internet Service Provider) - Tendido Aéreo en Postes',
+        titleEn: 'ISP Project (Internet Service Provider) - Aerial Pole Deployment',
+        titlePt: 'Projeto ISP (Internet Service Provider) - Instalação Aérea em Postes',
         descriptionEs: 'Despliegue de red de distribución ISP en el municipio de Ozumba mediante instalación de cableado aéreo de fibra óptica en postes de distribución eléctrica existentes. El proyecto abarcó el tendido de cable desde nodos de distribución hasta puntos de entrega final, fusión de fibra óptica con máquina empalmadora profesional Signal Fire, instalación de splitters en poste para ramificación de la red, y aseguramiento de cada tramo con herrajes y accesorios certificados. Todo el trabajo en altura fue ejecutado con equipo de seguridad y arneses.',
         descriptionEn: 'ISP distribution network deployment in the Ozumba municipality through aerial fiber optic cabling installation on existing electrical utility poles. The project covered cable routing from distribution nodes to final delivery points, fiber optic fusion splicing with a professional Signal Fire splicer, aerial splitter installation for network branching, and securing each cable run with certified hardware and fittings. All elevated work was performed with full safety equipment and harnesses.',
         descriptionPt: 'Implantação de rede de distribuição ISP no município de Ozumba por meio de instalação de cabeamento aéreo de fibra óptica em postes de distribuição elétrica existentes. O projeto abrangeu o lançamento de cabo dos nós de distribuição até os pontos de entrega final, fusão de fibra óptica com máquina Signal Fire, instalação de splitters em poste para ramificação da rede e fixação de cada trecho com ferragens certificadas. Todo o trabalho em altura foi realizado com equipamentos de segurança e cintos.',
