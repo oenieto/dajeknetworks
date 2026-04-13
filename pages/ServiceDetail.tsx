@@ -5,6 +5,7 @@ import SEO from '../components/SEO';
 import { serviceIds, serviceIcons, serviceImages } from '../components/Services';
 import { getItemsByService } from '../data/portfolioData';
 import { serviceDetailsMap, SubCategory } from '../data/serviceDetails';
+import PortfolioCard from '../components/PortfolioCard';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function pick<T extends { es: string; en: string; pt: string }>(obj: T, lang: string): string {
@@ -86,7 +87,7 @@ const ServiceDetail: React.FC = () => {
     const serviceDescription = t(`services.items.${id}.description`);
     const icon = serviceIcons[id!];
     const image = serviceImages[id!];
-    const portfolioWorks = getItemsByService(id!).slice(0, 3);
+    const portfolioWorks = getItemsByService(id!);
     const detail = serviceDetailsMap[id!];
 
     const intro = detail
@@ -274,38 +275,15 @@ const ServiceDetail: React.FC = () => {
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {portfolioWorks.map(work => {
-                                const workTitle = work[`title${lang === 'en' ? 'En' : lang === 'pt' ? 'Pt' : 'Es'}` as keyof typeof work] as string;
-                                const workDesc  = work[`description${lang === 'en' ? 'En' : lang === 'pt' ? 'Pt' : 'Es'}` as keyof typeof work] as string;
-                                return (
-                                    <Link
-                                        key={work.id}
-                                        to={`/portfolio?service=${id}`}
-                                        className="group rounded-2xl overflow-hidden border border-slate-200 dark:border-white/5 bg-white dark:bg-slate-900 hover:shadow-xl hover:shadow-sky-500/10 hover:-translate-y-1 transition-all duration-300"
-                                    >
-                                        <div className="aspect-[4/3] overflow-hidden relative">
-                                            <img
-                                                src={work.image}
-                                                alt={workTitle}
-                                                loading="lazy"
-                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                            />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                        </div>
-                                        <div className="p-4">
-                                            <h3 className="font-bold text-slate-900 dark:text-white text-sm mb-1.5 leading-snug group-hover:text-primary transition-colors">
-                                                {workTitle}
-                                            </h3>
-                                            <p className="text-slate-500 dark:text-slate-400 text-xs leading-relaxed line-clamp-2">{workDesc}</p>
-                                            <div className="flex flex-wrap gap-1 mt-3">
-                                                {work.tags.slice(0, 3).map(tag => (
-                                                    <span key={tag} className="text-[10px] font-semibold text-primary bg-sky-500/10 px-2 py-0.5 rounded-full">{tag}</span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </Link>
-                                );
-                            })}
+                            {portfolioWorks.map(work => (
+                                <PortfolioCard
+                                    key={work.id}
+                                    item={work}
+                                    showServiceBadge={false}
+                                    linkTo={`/portfolio?service=${id}`}
+                                    compact
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>

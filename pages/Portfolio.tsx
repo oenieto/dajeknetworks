@@ -1,9 +1,10 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useMemo } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import SEO from '../components/SEO';
-import { serviceIds, serviceIcons } from '../components/Services';
+import { serviceIds } from '../components/Services';
 import { portfolioItems } from '../data/portfolioData';
+import PortfolioCard from '../components/PortfolioCard';
 
 // Helper to pick the right localized field
 const useLocalizedField = () => {
@@ -30,27 +31,6 @@ const useLocalizedField = () => {
 const Portfolio: React.FC = () => {
     const { t, i18n } = useTranslation();
     const [searchParams, setSearchParams] = useSearchParams();
-    const [hoveredId, setHoveredId] = useState<string | null>(null);
-    // Track active image index per card for auto-rotation
-    const [activeImageIndex, setActiveImageIndex] = useState<Record<string, number>>({});
-    const intervalRefs = useRef<Record<string, ReturnType<typeof setInterval>>>({});
-
-    // Start/stop rotation when hovering
-    const startRotation = (itemId: string, totalImages: number) => {
-        if (intervalRefs.current[itemId]) return;
-        intervalRefs.current[itemId] = setInterval(() => {
-            setActiveImageIndex(prev => ({
-                ...prev,
-                [itemId]: ((prev[itemId] ?? 0) + 1) % totalImages,
-            }));
-        }, 2500);
-    };
-    const stopRotation = (itemId: string) => {
-        clearInterval(intervalRefs.current[itemId]);
-        delete intervalRefs.current[itemId];
-    };
-    // Cleanup on unmount
-    useEffect(() => () => { Object.values(intervalRefs.current).forEach(clearInterval); }, []);
 
     const localField = useLocalizedField();
 
@@ -165,119 +145,14 @@ const Portfolio: React.FC = () => {
                             {filtered.length} {filtered.length === 1 ? t('portfolio.project') : t('portfolio.projects')}
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {filtered.map(item => {
-                                const title = item[`title${i18n.language === 'en' ? 'En' : i18n.language === 'pt' ? 'Pt' : 'Es'}` as keyof typeof item] as string;
-                                const description = item[`description${i18n.language === 'en' ? 'En' : i18n.language === 'pt' ? 'Pt' : 'Es'}` as keyof typeof item] as string;
-
-                                return (
-                                    <div
-                                        key={item.id}
-                                        id={`portfolio-item-${item.id}`}
-                                        className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:shadow-sky-500/10 transition-all duration-500 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5"
-                                        onMouseEnter={() => {
-                                            setHoveredId(item.id);
-                                            if (item.images && item.images.length > 1) {
-                                                startRotation(item.id, item.images.length);
-                                            }
-                                        }}
-                                        onMouseLeave={() => {
-                                            setHoveredId(null);
-                                            stopRotation(item.id);
-                                            setActiveImageIndex(prev => ({ ...prev, [item.id]: 0 }));
-                                        }}
-                                    >
-                                        {/* Image with rotation support */}
-                                        <div className="relative aspect-[4/3] overflow-hidden">
-                                            {item.images && item.images.length > 1 ? (
-                                                // Multi-image: render all, fade between them
-                                                item.images.map((src, idx) => (
-                                                    <img
-                                                        key={src}
-                                                        src={src}
-                                                        alt={`${title} ${idx + 1}`}
-                                                        loading="lazy"
-                                                        className={`absolute inset-0 w-full h-full object-cover transform transition-all duration-700 ${
-                                                            (activeImageIndex[item.id] ?? 0) === idx
-                                                                ? 'opacity-100 scale-105'
-                                                                : 'opacity-0 scale-100'
-                                                        } group-hover:scale-110`}
-                                                    />
-                                                ))
-                                            ) : (
-                                                <img
-                                                    src={item.image}
-                                                    alt={title}
-                                                    loading="lazy"
-                                                    className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-110"
-                                                />
-                                            )}
-                                            {/* Dark overlay on hover */}
-                                            <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 ${hoveredId === item.id ? 'opacity-100' : 'opacity-0'}`} />
-
-                                            {/* Image counter dots for galleries */}
-                                            {item.images && item.images.length > 1 && (
-                                                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
-                                                    {item.images.map((_, idx) => (
-                                                        <span
-                                                            key={idx}
-                                                            className={`block rounded-full transition-all duration-300 ${
-                                                                (activeImageIndex[item.id] ?? 0) === idx
-                                                                    ? 'w-4 h-1.5 bg-white'
-                                                                    : 'w-1.5 h-1.5 bg-white/50'
-                                                            }`}
-                                                        />
-                                                    ))}
-                                                </div>
-                                            )}
-
-                                            {/* Featured badge */}
-                                            {item.featured && (
-                                                <div className="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full">
-                                                    {t('portfolio.featured')}
-                                                </div>
-                                            )}
-
-                                            {/* Service badge */}
-                                            <div className="absolute top-3 right-3 bg-black/50 backdrop-blur-sm text-white text-[10px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full flex items-center gap-1">
-                                                <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>{serviceIcons[item.serviceId]}</span>
-                                                {serviceLabel(item.serviceId)}
-                                            </div>
-
-                                            {/* Hover CTA */}
-                                            <div className={`absolute inset-0 flex items-end p-4 transition-opacity duration-300 ${hoveredId === item.id ? 'opacity-100' : 'opacity-0'}`}>
-                                                <Link
-                                                    to={`/services/${item.serviceId}`}
-                                                    className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-primary text-white text-sm font-bold rounded-xl hover:bg-sky-400 transition-colors"
-                                                >
-                                                    <span className="material-symbols-outlined" style={{ fontSize: '16px' }}>arrow_forward</span>
-                                                    {t('portfolio.goToService')} {serviceLabel(item.serviceId)}
-                                                </Link>
-                                            </div>
-                                        </div>
-
-                                        {/* Card Body */}
-                                        <div className="p-5">
-                                            <h3 className="font-bold text-slate-900 dark:text-white mb-2 leading-snug">
-                                                {title}
-                                            </h3>
-                                            <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-4">
-                                                {description}
-                                            </p>
-                                            {/* Tags */}
-                                            <div className="flex flex-wrap gap-1.5">
-                                                {item.tags.map(tag => (
-                                                    <span
-                                                        key={tag}
-                                                        className="text-[11px] font-semibold text-primary bg-sky-500/10 dark:bg-sky-500/10 px-2.5 py-0.5 rounded-full border border-sky-500/20"
-                                                    >
-                                                        {tag}
-                                                    </span>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                            {filtered.map(item => (
+                                <PortfolioCard
+                                    key={item.id}
+                                    item={item}
+                                    showServiceBadge={true}
+                                    linkTo={`/services/${item.serviceId}`}
+                                />
+                            ))}
                         </div>
                     </>
                 )}
