@@ -123,7 +123,8 @@ export const portfolioItems: PortfolioItem[] = [
         descriptionEs: 'Desarrollo de una aplicación web (SPA) dedicada para la gestión integral de servicios de telecomunicaciones ISP. Con un frontend optimizado en React, Tailwind CSS y Vite para navegación instantánea (Context API). Su motor backend en Python y Django REST Framework procesa la lógica transaccional, respaldado por una base de datos PostgreSQL. Incorpora autenticación vía PyJWT, CORS, notificaciones automáticas (SMTP), y está desplegado bajo una arquitectura altamente escalable usando Docker y Gunicorn.',
         descriptionEn: 'Development of a dedicated single-page application (SPA) for the comprehensive management of ISP telecommunication services. Built with a React, Tailwind CSS, and Vite frontend for instant navigation. The Python and Django REST Framework backend handles transactional logic with a PostgreSQL database. It features PyJWT authentication, automated SMTP notifications, and is fully orchestrated via Docker and Gunicorn for high concurrency and scalability.',
         descriptionPt: 'Desenvolvimento de uma aplicação web (SPA) dedicada à gestão integral de serviços de telecomunicações ISP. Frontend construído em React, Tailwind CSS e Vite para navegação instantânea. O motor backend em Python e Django REST Framework processa a lógica de negócios usando um banco de dados PostgreSQL. Inclui autenticação PyJWT, notificações automáticas, e é implantado usando Docker e Gunicorn para alta escalabilidade.',
-        image: '/portfolio/multicarrier-portal.png',
+        image: '/portfolio/anahuac.png',
+        images: ['/portfolio/anahuac.png', '/portfolio/multicarrier-portal.png'],
         tags: ['React', 'Python', 'Django', 'PostgreSQL', 'Docker', 'Desarrollo Web'],
         featured: true,
     }
